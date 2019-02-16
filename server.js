@@ -4,6 +4,10 @@ const Next = require('next')
 const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
 
+fastify.register(require('fastify-cookie'), (err) => {
+  if (err) throw err
+})
+
 fastify.register((fastify, opts, next) => {
   const app = Next({ dev })
   app
@@ -18,7 +22,7 @@ fastify.register((fastify, opts, next) => {
       }
 
       fastify.get('/a', (req, reply) => {
-        reply.send({ hello: 'world' })
+        reply.setCookie('test','this').send({ hello: 'world' })
       })
 
       fastify.get('/b', (req, reply) => {

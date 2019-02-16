@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import { auth } from '../utils/auth';
+import nextCookie from 'next-cookies'
 
 class Login extends Component {
   static getInitialProps ({ req }) {
@@ -17,7 +18,10 @@ class Login extends Component {
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
-
+  static async getInitialProps (ctx) {
+    const { token } = nextCookie(ctx)
+    return { token }
+  }
   handleChange (event) {
     this.setState({ username: event.target.value })
   }
@@ -31,7 +35,17 @@ class Login extends Component {
     )
   }
 
-  render () {
+  render ({props}) {
+    console.log(data);
+    if (props.data.token) {
+      return (
+        <div>
+          logged in
+        </div>
+      )
+
+    } 
+
     return (
       <div>
         login page

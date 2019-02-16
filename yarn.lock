@@ -2138,6 +2138,21 @@ fast-safe-stringify@^1.0.8, fast-safe-stringify@^1.2.3:
   resolved "https://registry.yarnpkg.com/fast-safe-stringify/-/fast-safe-stringify-1.2.3.tgz#9fe22c37fb2f7f86f06b8f004377dbf8f1ee7bc1"
   integrity sha512-QJYT/i0QYoiZBQ71ivxdyTqkwKkQ0oxACXHYxH2zYHJEgzi2LsbjgvtzTbLi1SZcF190Db2YP7I7eTsU2egOlw==
 
+fastify-cookie@2.1.7:
+  version "2.1.7"
+  resolved "https://registry.yarnpkg.com/fastify-cookie/-/fastify-cookie-2.1.7.tgz#97f2ac16386e7f671f3c80cac030a1a999293261"
+  integrity sha512-+dWM5zfGX7sfOqNH6OCFlnQbbvhVrkMbSf1gLGXVle/GFcl1VO6Sl/2hGdDcZ7RoyQk2qWUmLclAk+o8r3wYxg==
+  dependencies:
+    cookie "^0.3.1"
+    fastify-plugin "^1.4.0"
+
+fastify-plugin@^1.4.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/fastify-plugin/-/fastify-plugin-1.5.0.tgz#4bea12c54112f4749c17f3a1f17356cbdfa661af"
+  integrity sha512-bXKSTR4Q1lxERf1p/10Aakga570XtcxCCvPR1gby5js1XOtg7E8UV+aHHEPbGowQGV/KVb7ARBROhPk2I4DfBw==
+  dependencies:
+    semver "^5.5.0"
+
 fastify@1.14.1:
   version "1.14.1"
   resolved "https://registry.yarnpkg.com/fastify/-/fastify-1.14.1.tgz#90d204c4827af41bcc3cc16d3f3cdc103690680d"
@@ -2858,6 +2873,11 @@ isobject@^3.0.0, isobject@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
   integrity sha1-TkMekrEalzFjaqH5yNHMvP2reN8=
+
+js-cookie@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/js-cookie/-/js-cookie-2.2.0.tgz#1b2c279a6eece380a12168b92485265b35b1effb"
+  integrity sha1-Gywnmm7s44ChIWi5JIUmWzWx7/s=
 
 js-levenshtein@^1.1.3:
   version "1.1.6"
