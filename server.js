@@ -1,7 +1,5 @@
 const fastify = require('fastify')({ logger: { level: 'error' } })
-const Next = require('next');
-
-const nextCookie = require ('next-cookies');
+const Next = require('next')
 
 const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
@@ -23,10 +21,16 @@ fastify.register((fastify, opts, next) => {
         reply.send({ hello: 'world' })
       })
 
-      fastify.get('/login/:key', (req, reply) => {
-        const key = req.params.key;
-        console.log(key)
-        reply.send({ hello: 'world' })
+      fastify.get('/b', (req, reply) => {
+        return app.render(req.req, reply.res, '/a', req.query).then(() => {
+          reply.sent = true
+        })
+      })
+
+      fastify.get('/*', (req, reply) => {
+        return app.handleRequest(req.req, reply.res).then(() => {
+          reply.sent = true
+        })
       })
 
       fastify.setNotFoundHandler((request, reply) => {
