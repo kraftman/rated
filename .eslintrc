@@ -11,6 +11,7 @@
     "semi": 1,
     "padded-blocks": 1,
     "space-before-function-paren": 0,
-    "eol-last": 1
+    "eol-last": 1,
+    "no-unused-vars": 1
   }
 }
